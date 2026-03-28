@@ -95,7 +95,7 @@ body {
   font-size: 28px;
   color: var(--accent);
   margin-bottom: 16px;
-  animation: spin 6s linear infinite;
+  
 }
 
 @keyframes spin {
