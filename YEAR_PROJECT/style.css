@@ -29,6 +29,45 @@ body {
   position: relative;
 }
 
+/* ── Background floating shapes ── */
+.bg-shapes { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .18;
+  animation: float 10s ease-in-out infinite alternate;
+}
+
+.shape-1 {
+  width: 420px; height: 420px;
+  background: #c8a96e;
+  top: -120px; left: -100px;
+  animation-duration: 12s;
+}
+
+.shape-2 {
+  width: 320px; height: 320px;
+  background: #5b6fff;
+  bottom: -80px; right: -80px;
+  animation-duration: 9s;
+  animation-delay: -3s;
+}
+
+.shape-3 {
+  width: 200px; height: 200px;
+  background: #ff6b9d;
+  top: 60%; left: 60%;
+  animation-duration: 15s;
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, 20px) scale(1.08); }
+}
+
 /* ── Card ── */
 .card {
   position: relative;
@@ -40,10 +79,28 @@ body {
   width: 100%;
   max-width: 420px;
   box-shadow: var(--shadow);
+  animation: slideUp .6s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ── Header ── */
 .card-header { text-align: center; margin-bottom: 36px; }
+
+.logo {
+  display: inline-block;
+  font-size: 28px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
 
 .card-header h1 {
   font-family: 'Playfair Display', serif;
@@ -153,7 +210,7 @@ input:focus {
   flex: 1;
   height: 1px;
   background: var(--border);
-}Login
+}
 
 .divider span {
   font-size: .78rem;
@@ -213,6 +270,79 @@ input:focus {
 }
 
 .signup-text a:hover { opacity: .75; }
+
+/* ── Messages ── */
+.msg {
+  display: none;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: .85rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.error-msg {
+  background: rgba(239, 68, 68, .12);
+  border: 1px solid rgba(239, 68, 68, .3);
+  color: #f87171;
+}
+
+.success-msg {
+  background: rgba(52, 211, 153, .12);
+  border: 1px solid rgba(52, 211, 153, .3);
+  color: #6ee7b7;
+}
+
+/* ── Password wrapper ── */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 64px;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: .4px;
+  padding: 4px 6px;
+  transition: opacity .2s;
+}
+
+.toggle-btn:hover { opacity: .7; }
+
+/* ── Clear button ── */
+.btn-clear {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  background: transparent;
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .88rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+
+.btn-clear:hover {
+  color: var(--text);
+  border-color: #3d4460;
+}
 
 /* ── Responsive ── */
 @media (max-width: 480px) {
