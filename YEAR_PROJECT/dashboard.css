@@ -1,0 +1,78 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container */
+.container {
+  background-color: #111827;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 10px;
+  color: #fbbf24; /* gold */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+/* Input field */
+input {
+  width: 70%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  margin-right: 5px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fbbf24; /* gold */
+  color: #111827;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Task list */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  background-color: #1f2937;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: left;
+}
+
+/* Logout button spacing */
+button:last-of-type {
+  margin-top: 20px;
+  width: 100%;
+}
