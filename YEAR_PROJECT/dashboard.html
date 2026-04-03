@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <!-- Heading -->
+  <h1>Dashboard</h1>
+
+  <!-- Welcome text (will be filled using JS later) -->
+  <h2 id="welcome">Welcome</h2>
+
+  <hr>
+
+  <!-- Simple To-Do Section -->
+  <h3>My Tasks</h3>
+
+  <!-- Input + Button -->
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button onclick="addTask()">Add Task</button>
+
+  <!-- Task List -->
+  <ul id="taskList"></ul>
+
+  <hr>
+
+  <!-- Logout Button -->
+   <a href="login.html">
+  <button onclick="logout()">Logout</button>
+  </a>
+
+  <!-- JS file -->
+  <script src="dashboard.js"></script>
+
+</body>
+</html>
